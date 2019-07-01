@@ -19,12 +19,6 @@ public class Bai4_19SymAbility {
         Scanner scn = new Scanner(System.in);
         int n = 0, num;
         ArrayList<Integer> arr = new ArrayList<>();
-        try {
-            System.out.println("Nhap so phan tu cua mang: ");
-            n = scn.nextInt();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
         for (int i = 0; i < n; i++) {
             System.out.println("Nhap phan tu thu " + i + ":");
             num = scn.nextInt();
