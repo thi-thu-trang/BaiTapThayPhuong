@@ -48,22 +48,22 @@ public class Bai4_6DayTang {
             a.add(num);
         }
         int max = 0;
-        //int[] b = new int[100];
+        int[] b = new int[100];
 
         for (int i = 0; i < n; i++) {
-            // b[i] = 1;
-            int b = 1;
+            b[i] = 1;
+            // int b = 1;
             for (int j = i; j < n - 1; j++) {
                 if (a.get(j) <= a.get(j + 1)) {
-                    // b[i]++;
-                    b++;
+                    b[i]++;
+                    //b++;
                 }
                 if (a.get(j) > a.get(j + 1)) {
                     break;
                 }
             }
-            //if (b[i] > max) max = b[i];
-            if (b > max) max = b;
+            if (b[i] > max) max = b[i];
+            //if (b > max) max = b;
         }
         System.out.println("Do dai day con tang dan nhieu nhat: " + max);
     }
