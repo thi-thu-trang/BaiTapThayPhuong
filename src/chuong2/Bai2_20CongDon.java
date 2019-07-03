@@ -11,19 +11,19 @@ public class Bai2_20CongDon {
             if (n % 2 == 0)
                 sum += n;
 
-        } while (SoNguyenTo(n) == false);
+        } while (SoNguyenTo(n) == true);
         System.out.println(sum);
     }
 
     private static boolean SoNguyenTo(int n) {
         if (n < 2)
-            return false;
+            return true;
         else {
             for (int i = 2; i <= Math.sqrt(n); i++) {
                 if (n % i == 0)
-                    return false;
+                    return true;
             }
-            return true;
+            return false;
         }
 
     }

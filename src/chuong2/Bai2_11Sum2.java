@@ -9,7 +9,7 @@ public class Bai2_11Sum2 {
         double s = 0;
         int a = 1;
         for (int j = 1; j <= n; j++) {
-            a *= j;
+            a = a * j;
             s = s + ((double) 1 / a);
         }
         System.out.printf("%.2f", s);
