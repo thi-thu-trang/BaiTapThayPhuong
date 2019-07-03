@@ -11,7 +11,7 @@ public class Bai2_11Sum3 {
         float S = 1;
         int a = 1;
         for (int j = 1; j <= n; j++) {
-            a *= j;
+            a = a * j;
             S = S + (float) Math.pow(x, j) / a;
         }
         System.out.printf("%.2f", S);
