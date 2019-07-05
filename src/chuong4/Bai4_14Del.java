@@ -24,5 +24,10 @@ public class Bai4_14Del {
         if (tong % 2 == 0) {
             System.out.println(chan * (chan - 1) / 2 + (n - chan) * (n - chan - 1) / 2);
         } else System.out.println(chan * (n - chan));
+
+
     }
+
+
 }
+
