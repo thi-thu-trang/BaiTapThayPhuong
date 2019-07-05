@@ -5,54 +5,58 @@ import java.util.Scanner;
 public class Bai4_7MatSum {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int m, n, k;
-        int[][] a, b, c;
-        System.out.println("Nhap cap ma tran a: ");
-        m = scn.nextInt();
-        n = scn.nextInt();
-        System.out.println("Nhap so cot ma tran b: ");
-        k = scn.nextInt();
-        System.out.println("Nhap ma tran a: ");
-        a = nhap(m, n, scn);
-        System.out.println("Nhap ma tran b: ");
-        b = nhap(n, k, scn);
-        System.out.println("Ket qua: ");
-        c = Tich2MaTran(a, b);
-        Xuat(c);
-    }
-
-    private static int[][] nhap(int m, int n, Scanner scn) {
-        int[][] x = new int[m][n];
+        int m, n;
+        do {
+            System.out.println("nhap vao so dong cua ma tran:");
+            m = scn.nextInt();
+            System.out.println("nhap cot:");
+            n = scn.nextInt();
+        } while (m < 1 || n < 1);
+        int[][] a = new int[m][n];
+        int[][] b = new int[m][n];
+        int[][] c = new int[m][n];
+        System.out.println("nhap ma tran a");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                x[i][j] = scn.nextInt();
+                System.out.println("a[" + i + "," + j + "]=");
+                a[i][j] = scn.nextInt();
             }
         }
-        return x;
-    }
-
-    private static void Xuat(int[][] x) {
-        for (int i = 0; i < x.length; i++) {
-            for (int j = 0; j < x[0].length; j++) {
-                System.out.printf("%5d", x[i][j]);
-            }
-            System.out.println();
-        }
-    }
-
-    private static int[][] Tich2MaTran(int[][] a, int[][] b) {
-        int[][] c = new int[a.length][b[0].length];
-        int m = a.length;
-        int n = b[0].length;
-        int k = a[0].length;
+        System.out.println("nhap ma tran b");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                for (int l = 0; l < k; l++) {
-                    c[i][j] += a[i][l] + b[l][j];
-                }
+                System.out.println("b[" + i + "," + j + "]=");
+                b[i][j] = scn.nextInt();
             }
         }
-        return c;
+        System.out.println("ma tran a");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
+
+        System.out.println("Ma tran B:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(b[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        System.out.println("Ma trận tổng C:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(c[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
     }
 }
-
