@@ -3,6 +3,14 @@ package chuong2;
 import java.util.Scanner;
 
 public class Bai2_2Date {
+    private static boolean namnhuan(int year) {
+        if (year % 100 != 0 && year % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int date = scanner.nextInt();
@@ -11,15 +19,6 @@ public class Bai2_2Date {
         int datemax = 0;
         if (true) {
             switch (month) {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    datemax = 31;
-                    break;
                 case 4:
                 case 6:
                 case 9:
@@ -27,11 +26,14 @@ public class Bai2_2Date {
                     datemax = 30;
                     break;
                 case 2:
-                    if (year % 100 != 0 && year % 4 == 0)
+                    if (namnhuan(year))
                         datemax = 29;
                     else
                         datemax = 28;
                     break;
+                default:
+                    datemax = 31;
+
             }
         }
         if (date > 0 && date <= datemax && month > 0 && month <= 12) {
