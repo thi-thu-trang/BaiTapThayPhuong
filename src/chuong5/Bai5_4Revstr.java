@@ -9,7 +9,7 @@ public class Bai5_4Revstr {
         daonguoc.toString();
         //chuoi.reverse();
         //console.log(myArray)
-        System.out.println(scanner);
+        System.out.println(daonguoc);
 
     }
 }
