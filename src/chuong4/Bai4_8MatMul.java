@@ -12,12 +12,9 @@ public class Bai4_8MatMul {
         n = scn.nextInt();
         System.out.println("Nhap so cot ma tran b: ");
         k = scn.nextInt();
-        System.out.println("Nhap ma tran a: ");
         a = nhap(m, n, scn);
-        System.out.println("Nhap ma tran b: ");
         b = nhap(n, k, scn);
-        System.out.println("Ket qua: ");
-        c = TichMaTran(a, b);
+        c = Tich2MaTran(a, b);
         Xuat(c);
     }
 
@@ -40,7 +37,7 @@ public class Bai4_8MatMul {
         }
     }
 
-    private static int[][] TichMaTran(int[][] a, int[][] b) {
+    private static int[][] Tich2MaTran(int[][] a, int[][] b) {
         int[][] c = new int[a.length][b[0].length];
         int m = a.length;
         int n = b[0].length;
