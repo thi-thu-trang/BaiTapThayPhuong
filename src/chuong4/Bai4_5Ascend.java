@@ -1,8 +1,6 @@
 package chuong4;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Bai4_5Ascend {
@@ -16,13 +14,19 @@ public class Bai4_5Ascend {
             int number = scanner.nextInt();
             mangtang.add(number);
         }
-        for (int k = 0; k < mangtang.size(); k++) {
-            if (mangtang.get(k) < mangtang.get(k + 1)) {
-                System.out.println("true");
-            } else System.out.println("false");
+        Check(mangtang);
+        System.out.println(Check(mangtang));
+
+
+    }
+
+    private static boolean Check(ArrayList<Integer> mangtang) {
+        for (int i = 0; i < mangtang.size(); i++) {
+            if (mangtang.get(i) < mangtang.get(i + 1)) {
+                return true;
+            } else return false;
         }
-
-
+        return false;
     }
 }
 
